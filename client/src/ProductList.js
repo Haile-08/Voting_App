@@ -4,6 +4,7 @@ import "../src/CSS/App.css";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
+import products from "./Data/seed";
 
 class ProductList extends React.Component {
   render() {

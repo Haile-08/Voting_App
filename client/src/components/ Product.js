@@ -18,7 +18,8 @@ class Product extends React.Component {
         <Card
           sx={{
             maxWidth: 560,
-            marigin: 20,
+            marginBottom: 5,
+            marginTop: 5,
             bgcolor: "#dcdde1",
             borderRadius: 2,
           }}
