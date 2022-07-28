@@ -8,8 +8,6 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
-import img1 from "../../src/asset/avatars/daniel.jpg";
-import img2 from "../asset/products/image-aqua.png";
 
 class Product extends React.Component {
   render() {
@@ -25,22 +23,27 @@ class Product extends React.Component {
           }}
         >
           <CardHeader
-            avatar={<Avatar src={img1} aria-label="recipe"></Avatar>}
-            title="Shrimp and Chorizo Paella"
-            subheader="September 14, 2016"
+            avatar={
+              <Avatar
+                src={this.props.submitteravatarurl}
+                aria-label="recipe"
+              ></Avatar>
+            }
+            title={this.props.title}
           />
           <CardMedia
             component="img"
-            alt="green iguana"
+            alt=""
             height="140"
-            image={img2}
+            image={this.props.productimageurl}
           />
           <CardContent>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+              {this.props.description}
             </Typography>
           </CardContent>
+          {console.log(this.props.submitteravatarurl)}
+          {console.log(this.props.productimageurl)}
           <IconButton>
             <ArrowDropUpIcon />
           </IconButton>
