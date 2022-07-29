@@ -8,8 +8,7 @@ import products from "./Data/seed";
 
 class ProductList extends React.Component {
   render() {
-    
-    const productcompnents = products.map((productitems) => (
+    return (
       <div className="App-header">
         <CssBaseline />
         <Container
@@ -19,20 +18,21 @@ class ProductList extends React.Component {
           <h2>Popular Product</h2>
           <hr />
           <Box sx={{ bgcolor: "#2f3640", height: "auto" }}>
-            <Product
-              id={productitems.id}
-              title={productitems.title}
-              description={productitems.description}
-              url={productitems.url}
-              votes={productitems.votes}
-              submitteravatarurl={productitems.submitterAvatarUrl}
-              productimageurl={productitems.productImageUrl}
-            />
+            {products.map((productitems) => (
+              <Product
+                id={productitems.id}
+                title={productitems.title}
+                description={productitems.description}
+                url={productitems.url}
+                votes={productitems.votes}
+                submitteravatarurl={productitems.submitterAvatarUrl}
+                productimageurl={productitems.productImageUrl}
+              />
+            ))}
           </Box>
         </Container>
       </div>
-    ));
-    return productcompnents; 
+    );
   }
 }
 
